@@ -1,0 +1,24 @@
+#import the necessary packages and mosules
+import numpy as np
+import matplotlib.pyplot as plt
+
+#define the function f(x,y)
+def f(x, y):
+    return 2*np.square(x) + 5*np.square(y)
+
+#define the domain of interest, and the size of the mesh
+domain_of_interest_x = (-5, 5)
+domain_of_interest_y = (-5, 5)
+grid_size = 0.1
+
+#generate the mesh points with the np.meshgrid() function
+mesh_points_x, mesh_points_y = np.meshgrid(np.arange(domain_of_interest_x[0], domain_of_interest_x[1], grid_size), np.arange(domain_of_interest_y[0], domain_of_interest_y[1], grid_size))
+
+#calculate the value of f(x, y) over the mesh points
+Z = f(mesh_points_x.ravel(), mesh_points_y.ravel())
+
+#reshape and plug into the plt.contour() function
+Z = Z.reshape(mesh_points_x.shape)
+plt.contour(mesh_points_x, mesh_points_y, Z, levels=[1, 5, 9, 13, 17, 29], cmap=plt.cm.Spectral)
+
+#you can try the same code with countourf() function and ro see how the code plot will change
