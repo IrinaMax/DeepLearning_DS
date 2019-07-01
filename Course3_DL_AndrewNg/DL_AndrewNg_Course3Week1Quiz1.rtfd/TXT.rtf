@@ -1,0 +1,1060 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 Georgia;\f1\fswiss\fcharset0 ArialMT;\f2\fnil\fcharset0 STIXGeneral-Regular;
+\f3\fnil\fcharset0 CambriaMath;\f4\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;\red42\green44\blue46;\red255\green255\blue255;\red83\green83\blue83;
+\red232\green242\blue226;\red7\green63\blue169;\red39\green170\blue96;\red0\green0\blue0;\red0\green0\blue0;
+\red217\green217\blue217;\red65\green65\blue65;}
+{\*\expandedcolortbl;;\cssrgb\c21569\c22745\c23529;\cssrgb\c100000\c100000\c100000;\cssrgb\c40000\c40000\c40000;
+\cssrgb\c92549\c95686\c90980;\cssrgb\c392\c33725\c72157;\cssrgb\c16471\c70980\c45098;\cssrgb\c0\c0\c0\c4706;\cssrgb\c0\c0\c0;
+\cssrgb\c87843\c87843\c87843;\cssrgb\c32157\c32157\c32157;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww23460\viewh13040\viewkind0
+\deftab720
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f0\fs40 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Bird recognition in the city of Peacetopia (case study)\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f1\fs24 \cf4 \cb3 \strokec4 Quiz,\'a015 questions\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs28 \cf2 \cb3 \strokec2 \
+\pard\pardeftab720\sl450\partightenfactor0
+
+\fs36 \cf2 \cb5 Congratulations! You passed!\cb1 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\b0\fs24 \cf6 \cb5 \strokec6 Next Item
+\fs28 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 1\
+\pard\pardeftab720\sl480\sa320\partightenfactor0
+
+\b\fs44 \cf2 \ul \ulc2 Problem Statement
+\b0 \ulnone \
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 This example is adapted from a real production application, but with details disguised to protect confidentiality.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs35\fsmilli17600 \cf2 \
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You are a famous researcher in the City of Peacetopia. The people of Peacetopia have a common characteristic: they are afraid of birds. To save them, you have\'a0
+\b to build an algorithm that will detect any bird flying over Peacetopia
+\b0 \'a0and alert the population.\
+The City Council gives you a dataset of 10,000,000 images of the sky above Peacetopia, taken from the city\'92s security cameras. They are labelled:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\sa200\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 y = 0: There is no bird on the image\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 y = 1: There is a bird on the image\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+\cf2 Your goal is to build an algorithm able to classify new images taken by security cameras from Peacetopia.\
+There are a lot of decisions to make:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\sa200\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the evaluation metric?\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 How do you structure your data into train/dev/test sets?\
+\pard\pardeftab720\sl480\sa320\partightenfactor0
+
+\b\fs44 \cf2 \ul \ulc2 Metric of success
+\b0 \ulnone \
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 The City Council tells you that they want an algorithm that\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\sa200\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Has high accuracy\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Runs quickly and takes only a short time to classify a new image.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Can fit in a small amount of memory, so that it can run in a small processor that the city will attach to many different security cameras.\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf2 \ul \ulc2 Note\ulnone : Having three evaluation metrics makes it harder for you to quickly choose between two different algorithms, and will slow down the speed with which your team can iterate. True/False?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 True\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 False\
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 Question 2\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 After further discussions, the city narrows down its criteria to:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl320\sa200\partightenfactor0
+\ls4\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 "We need an algorithm that can let us know a bird is flying over Peacetopia as accurately as possible."\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 "We want the trained model to take no more than 10sec to classify a new image.\'94\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'93We want the model to fit in 10MB of memory.\'94\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf2 If you had the three following models, which one would you choose?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Test Accuracy\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Runtime\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Memory size\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 97%\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 1 sec\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3MB\cell \lastrow\row
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Test Accuracy\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Runtime\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Memory size\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 99%\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 13 sec\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 9MB\cell \lastrow\row
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Test Accuracy\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Runtime\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Memory size\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 97%\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3 sec\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 2MB\cell \lastrow\row
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Test Accuracy\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Runtime\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Memory size\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth3018\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2054\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2803\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 98%\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 9 sec\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 9MB\cell \lastrow\row
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \strokec2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\b0\fs28 \cf11 \cb8 \strokec11 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct! As soon as the runtime is less than 10 seconds you're good. So, you may simply maximize the test accuracy after you made sure the runtime is <10sec.\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 3\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Based on the city\'92s requests, which of the following would you say is true?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Accuracy is an optimizing metric; running time and memory size are a satisficing metrics.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Accuracy is a satisficing metric; running time and memory size are an optimizing metric.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Accuracy, running time and memory size are all optimizing metrics because you want to do well on all three.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Accuracy, running time and memory size are all satisficing metrics because you have to do sufficiently well on all three for your system to be acceptable.\
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \'a0\
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 4\
+\pard\pardeftab720\sl480\sa320\partightenfactor0
+
+\b\fs44 \cf2 \ul \ulc2 Structuring your data
+\b0 \ulnone \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Before implementing your algorithm, you need to split your data into train/dev/test sets. Which of these do you think is the best choice?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2876\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2499\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2499\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Train\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Test\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2876\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2499\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2499\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 9,500,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 250,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 250,000\cell \lastrow\row
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \strokec2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\b0\fs28 \cf11 \cb8 \strokec11 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Yes.\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Train\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Test\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 6,000,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 1,000,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3,000,000\cell \lastrow\row
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Train\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Test\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 6,000,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3,000,000\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 1,000,000\cell \lastrow\row
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \strokec2 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Train\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Test\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth2625\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3,333,334\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3,333,333\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 3,333,333\cell \lastrow\row
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \strokec2 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 5\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 After setting up your train/dev/test sets, the City Council comes across another 1,000,000 images, called the \'93citizens\'92 data\'94. Apparently the citizens of Peacetopia are so scared of birds that they volunteered to take pictures of the sky and label them, thus contributing these additional 1,000,000 images. These images are different from the distribution of images the City Council had originally given you, but you think it could help your algorithm.\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf2 You should not add the citizens\'92 data to the training set, because this will cause the training and dev/test set distributions to become different, thus hurting dev and test set performance. True/False?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 True\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 False\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\b0\fs28 \cf11 \cb8 \strokec11 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Adding this data to the training set will change the training set distribution. However, it is not a problem to have different training and dev distribution. On the contrary, it would be very problematic to have different dev and test set distributions.\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 6\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 One member of the City Council knows a little about machine learning, and thinks you should add the 1,000,000 citizens\'92 data images to the test set. You object because:\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 The 1,000,000 citizens\'92 data images do not have a consistent x-->y mapping as the rest of the data (similar to the New York City/Detroit housing prices example from lecture).\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 This would cause the dev and test set distributions to become different. This is a bad idea because you\'92re not aiming where you want to hit.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 A bigger test set will slow down the speed of iterating because of the computational expense of evaluating models on the test set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 The test set no longer reflects the distribution of data (security cameras) you most care about.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\b0\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 7\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You train a system, and its errors are as follows (error = 100%-Accuracy):\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth6785\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3221\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Training set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 4.0%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth6785\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth3221\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 4.5%\cell \lastrow\row
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 \strokec2 This suggests that one good avenue for improving performance is to train a bigger network so as to drive down the 4.0% training error. Do you agree?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Yes, because having 4.0% training error shows you have high bias.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Yes, because this shows your bias is higher than your variance.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 No, because this shows your variance is higher than your bias.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 No, because there is insufficient information to tell.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\b0\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 8\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You ask a few people to label the dataset so as to find out what is human-level performance. You find the following levels of accuracy:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7814\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2192\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Bird watching expert #1\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.3% error\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7814\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2192\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Bird watching expert #2\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.5% error\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7814\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2192\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Normal person #1 (not a bird watching expert)\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 1.0% error\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7814\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2192\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Normal person #2 (not a bird watching expert)\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 1.2% error\cell \lastrow\row
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 \strokec2 If your goal is to have \'93human-level performance\'94 be a proxy (or estimate) for Bayes error, how would you define \'93human-level performance\'94?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 0.0% (because it is impossible to do better than this)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 0.3% (accuracy of expert #1)\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 0.4% (average of 0.3 and 0.5)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 0.75% (average of all four numbers above)\
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 9\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Which of the following statements do you agree with?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 A learning algorithm\'92s performance can be better than human-level performance but it can never be better than Bayes error.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 A learning algorithm\'92s performance can never be better than human-level performance but it can be better than Bayes error.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 A learning algorithm\'92s performance can never be better than human-level performance nor better than Bayes error.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 A learning algorithm\'92s performance can be better than human-level performance and better than Bayes error.\
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 10\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You find that a team of ornithologists debating and discussing an image gets an even better 0.1% performance, so you define that as \'93human-level performance.\'94 After working further on your algorithm, you end up with the following:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Human-level performance\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.1%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Training set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 2.0%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 2.1%\cell \lastrow\row
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 \strokec2 Based on the evidence you have, which two of the following four options seem the most promising to try? (Check two options.)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Try decreasing regularization.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Try increasing regularization.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Train a bigger model to try to do better on the training set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Get a bigger training set to reduce variance.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\b0\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 11\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You also evaluate your model on the test set, and find the following:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Human-level performance\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.1%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Training set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 2.0%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 2.1%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7532\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2474\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Test set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 7.0%\cell \lastrow\row
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 \strokec2 What does this mean? (Check the two best options.)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 You have underfit to the dev set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 You should get a bigger test set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 You have overfit to the dev set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 You should try to get a bigger dev set.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\b0\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 12\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 After working on this project for a year, you finally achieve:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrt\brdrs\brdrw20\brdrcf10 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7319\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2687\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+
+\fs21\fsmilli10800 \cf9 \strokec9 Human-level performance\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.10%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7319\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2687\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Training set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.05%\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \tamarb480 \trbrdrl\brdrs\brdrw20\brdrcf10 \trbrdrb\brdrs\brdrw20\brdrcf10 \trbrdrr\brdrs\brdrw20\brdrcf10 
+\clvertalc \clshdrawnil \clwWidth7319\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2687\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf10 \clbrdrl\brdrs\brdrw20\brdrcf10 \clbrdrb\brdrs\brdrw20\brdrcf10 \clbrdrr\brdrs\brdrw20\brdrcf10 \clpadt100 \clpadl400 \clpadb100 \clpadr400 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 Dev set error\cell 
+\pard\intbl\itap1\pardeftab720\sl240\partightenfactor0
+\cf9 0.05%\cell \lastrow\row
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 \strokec2 What can you conclude? (Check all that apply.)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 This is a statistical anomaly (or must be the result of statistical noise) since it should not be possible to surpass human-level performance.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 With only 0.09% further progress to make, you should quickly be able to close the remaining gap to 0%\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 If the test set is big enough for the 0.05% error estimate to be accurate, this implies Bayes error is\'a0\
+\pard\pardeftab720\sl520\partightenfactor0
+
+\f2\fs34\fsmilli17360 \cf2 \up0 \uc0\u8804 0.05
+\f1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \up0 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 It is now harder to measure avoidable bias, thus progress will be slower going forward.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\b0\fs49\fsmilli24640 \cf2 \strokec2 \shad0 \'a0\
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 13\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 It turns out Peacetopia has hired one of your competitors to build a system as well. Your system and your competitor both deliver systems with about the same running time and memory size. However, your system has higher accuracy! However, when Peacetopia tries out your and your competitor\'92s systems, they conclude they actually like your competitor\'92s system better, because even though you have higher overall accuracy, you have more false negatives (failing to raise an alarm when a bird is in the air). What should you do?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Look at all the models you\'92ve developed during the development process and find the one with the lowest false negative error rate.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Ask your team to take into account both accuracy and false negative rate during development.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Rethink the appropriate metric for this task, and ask your team to tune to the new metric.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Pick false negative rate as the new metric, and use this new metric to drive all further development.\
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 \'a0\
+\pard\pardeftab720\sl580\partightenfactor0
+\cf2 Question 14\
+\pard\pardeftab720\sl400\sa400\partightenfactor0
+
+\fs28 \cf2 You\'92ve handily beaten your competitor, and your system is now deployed in Peacetopia and is protecting the citizens from birds! But over the last few months, a new species of bird has been slowly migrating into the area, so the performance of your system slowly degrades because your data is being tested on a new type of data.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs35\fsmilli17600 \cf2 \pard\pardeftab720\sl420\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 You have only 1,000 images of the new species of bird. The city expects a better system from you within the next 3 months. Which of these should you do first?\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Use the data you have to define a new evaluation metric (using a new dev/test set) taking into account the new species, and use that to drive further progress for your team.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Put the 1,000 images into the training set so as to try to do better on these birds.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Try data augmentation/data synthesis to get more images of the new type of bird.\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Add the 1,000 images into your dataset and reshuffle into a new train/dev/test split.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl580\partightenfactor0
+
+\fs49\fsmilli24640 \cf2 Question 15\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 The City Council thinks that having more Cats in the city would help scare off birds. They are so happy with your work on the Bird detector that they also hire you to build a Cat detector. (Wow Cat detectors are just incredibly useful aren\'92t they.) Because of years of working on Cat detectors, you have such a huge dataset of 100,000,000 cat images that training on this data takes about two weeks. Which of the statements do you agree with? (Check all that agree.)\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\fs28\fsmilli14400 \cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Having built a good Bird detector, you should be able to take the same model and hyperparameters and just apply it to the Cat dataset, so there is no need to iterate.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Un-selected is correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Needing two weeks to train will limit the speed at which you can iterate.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 If 100,000,000 examples is enough to build a good enough Cat detector, you might be better of training with just 10,000,000 examples to gain a\'a0\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f3\fs33\fsmilli16940 \cf2 \\approx\
+
+\f4 \uc0\u8776 
+\f1\fs28 10x improvement in how quickly you can run experiments, even if each model performs a bit worse because it\'92s trained on less data.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\b0\fs28\fsmilli14400 \cf2 \strokec2 \shad0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\fs28 \cf2 Buying faster computers could speed up your teams\'92 iteration speed and thus your team\'92s productivity.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf2 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\b\fs24 \cf7 \cb8 \strokec7 \shad\shadx0\shady-20\shadr0\shado127 \shadc0 Correct\'a0\cb1 \
+}
